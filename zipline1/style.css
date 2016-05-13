@@ -1,0 +1,92 @@
+*{
+  margin:0;
+  padding:0;
+}
+
+@font-face {
+font-family: "titlefont";
+src: url("titlefont.otf") format("opentype");
+}
+body{
+  min-height:100%;
+  min-width: 100%;
+  background-position: bottom;
+  background-image: url("28H.jpg")
+}
+.container{
+  width:50%;
+  margin:0 auto;
+  padding:50px;
+  margin-top:100px;
+  box-shadow: 4px 4px 4px rgba(0,0,0,0.5);
+
+
+  background-color: rgb(237,231,204);
+}
+.container header{
+  font-family: "titlefont";
+  padding-bottom:10px;
+  border-bottom:5px solid rgba(0,0,0,0.15);
+  color: #2D2500;
+  font-size: 1.5em;
+}
+.quote_box_outer{
+  margin-top:20px;
+}
+
+#quote::before{
+  content: "\201C";
+  font-size: 2em;
+}
+#quote{
+  font-family:"Krona One";
+  font-size: 1.7em;
+  font-style: italic;
+}
+#quote::after{
+  content: "\201D";
+  font-size: 1.5em;
+}
+#author::before{
+  content: "\21AA";
+  font-size: 1em;
+}
+#author{
+
+  font-size: 1.5em;
+  margin-top:15px;
+  text-align: right;
+}
+
+.quote_box_inner{
+  padding:2%;
+}
+
+footer{
+  margin-top:30px;
+  display:flex;
+  justify-content: flex-end;
+  text-align: center;
+}
+
+footer .button{
+  border:3.5px solid rgba(0,0,0,0.6);
+
+  border-radius: 15%;
+  padding:5px 20px 5px 20px;
+  -webkit-transition: background-color .5s;
+}
+
+.button:hover{
+  cursor: pointer;
+  color:white;
+  background-color: #2D2500;
+}
+
+footer .new_quote{
+  margin-left:30px;
+}
+footer h4{
+  font-size: 20px;
+
+}

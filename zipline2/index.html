@@ -1,0 +1,45 @@
+<html>
+  <title>Crazypkr's Weather Application</title>
+  <head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="fontawesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="weathericons/css/weather-icons.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <script type="text/javascript" src="javascript.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="mainContents">
+        <i id="weatherIcon" class="wi wi-day-cloudy"></i>
+        <h1 id="cityName"></h1>
+        <h3 id="temperature"><h3>
+      </div>
+      <div class="additionalContents">
+        <div class="windSpeed box">
+          <h3>Windspeed <i class="wi wi-strong-wind"></i></h3>
+          <h2 id="windData"></h2>
+        </div>
+        <div class="condition box">
+          <h3>Condition:  </h3>
+          <h2 id="conditionData">Slightly Cloudy</h2>
+        </div>
+        <div class="humidity box">
+          <h3>Humidity <i class="wi wi-humidity"></i> </h3>
+          <h2 id="humidityData"></h2>
+        </div>
+      </div>
+      <div class="search">
+        <form id="citySelector">
+          <h4>Search your city by zipcode</h4>
+          <h5>Zipcode</h5> <input id="zipCode" type="text" size="3" maxlength="6" value="48060"><br><br>
+          <a href="https://en.wikipedia.org/wiki/ISO_3166-2"><h5>Country Code</h5></a> <input id = "countryCode" input type="text" size="3" value="US-MI"><br><br>
+          <input type="submit" value="Submit">
+
+        </form>
+        <img id="funImage">
+
+      </div>
+    </div>
+
+  </body>
+</html>

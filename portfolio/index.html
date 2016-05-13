@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+
+<head>
+
+    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+    <!-- <script src="jQuery.scrollSpeed.js"></script> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <link rel="stylesheet" type="text/css" href="scss/mainstylesheet.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="scss/animate.css">
+
+    <title>Portfolio Website</title>
+
+</head>
+
+  <body>
+
+    <header class="main-header">
+      <div class="text-holder">
+        <h1>Nicholas <span>Lastname</span></h1>
+        <h2>Lambton College Student [CPET]</h2>
+      </div>
+      <svg class="arrows">
+        <path class="a1" d="M0 0 L30 32 L60 0"></path>
+        <path class="a2" d="M0 20 L30 52 L60 20"></path>
+        <path class="a3" d="M0 40 L30 72 L60 40"></path>
+      </svg>
+    </header>
+
+    <header class="nav-bar-f">
+      <div class="menu">
+        <div class="email-button">
+          <i class="fa fa-envelope-o"></i>
+        </div>
+        <div class="menu-button">
+          <p>Menu</p>
+          <i class="fa fa-list-ul"></i>
+        </div>
+      </div>
+      <ul>
+        <li id="current-screen"><a href="">Home</a></li>
+        <li><a href="">Abouts Me</a></li>
+        <li><a href="">Accomplishments</a></li>
+        <li><a href="">Resume</a></li>
+        <li><a href="">Contact Me</a></li>
+      </ul>
+    </header>
+
+    <!-- <div class="about-me">
+      <h1>About Me</h1>
+        <div class="about-me-p1">
+          <p><strong>blablabla</strong>x saperet reprehendunt, eam percipit adipisci patrioque id, esse omittantur te usu. Nullam volumus phaedrum ei duo, qui verear inimicus splendide te. Debet phaedrum ut eam, eros viris neglegentur mei eu. Ullamcorper consectetuer et pro. No facilis conclusionemque nec. Omnis tractatos ius ea, ex graecis similique duo. Et eruditi assentior vulputate his.orem ipsum dolor sit amet, sit ex saperet reprehendunt, eam percipit adipisci patrioque id, esse omittantur te usu. Nullam volumus phaedrum ei duo, qui verear inimicus splendide te. Debet phaedrum ut eam, eros viris neglegentur mei eu. Ullamcorper consectetuer et pro. No facilis conclusionemque nec. Omnis tractatos ius ea, ex graecis similique duo. Et eruditi assentior vulputate his.</p>
+          </div>
+          <div class="about-me-p2">
+            <p><strong>blablabla</strong>x saperet reprehendunt, eam percipit adipisci patrioque id, esse omittantur te usu. Nullam volumus phaedrum ei duo, qui verear inimicus splendide te. Debet phaedrum ut eam, eros viris neglegentur mei eu. Ullamcorper consectetuer et pro. No facilis conclusionemque nec. Omnis tractatos ius ea, ex graecis similique duo. Et eruditi assentior vulputate his.orem ipsum dolor sit amet, sit ex saperet reprehendunt, eam percipit adipisci patrioque id, esse omittantur te usu. Nullam volumus phaedrum ei duo, qui verear inimicus splendide te. Debet phaedrum ut eam, eros viris neglegentur mei eu. Ullamcorper consectetuer et pro. No facilis conclusionemque nec. Omnis tractatos ius ea, ex graecis similique duo. Et eruditi assentior vulputate his.</p>
+          </div>
+          <div class="about-me-p3">
+            <p><strong>blablabla</strong>x saperet reprehendunt, eam percipit adipisci patrioque id, esse omittantur te usu. Nullam volumus phaedrum ei duo, qui verear inimicus splendide te. Debet phaedrum ut eam, eros viris neglegentur mei eu. Ullamcorper consectetuer et pro. No facilis conclusionemque nec. Omnis tractatos ius ea, ex graecis similique duo. Et eruditi assentior vulputate his.orem ipsum dolor sit amet, sit ex saperet reprehendunt, eam percipit adipisci patrioque id, esse omittantur te usu. Nullam volumus phaedrum ei duo, qui verear inimicus splendide te. Debet phaedrum ut eam, eros viris neglegentur mei eu. Ullamcorper consectetuer et pro. No facilis conclusionemque nec. Omnis tractatos ius ea, ex graecis similique duo. Et eruditi assentior vulputate his.</p>
+          </div>
+          <div class="portrait-image"></div>
+    </div> -->
+
+</body>
+
+  <script>
+    $(document).ready(function(){
+      // On click starts
+      $( ".menu-button" ).click(function(){
+        if($('.nav-bar-f ul').is(':animated')) return;
+        if ($(".nav-bar-f ul").height() < 180){
+          $(".nav-bar-f ul").animate({height:mobileViewportHeight + "px"},500);
+          var x = 0;
+          setInterval(function(){
+            if (x < 6){
+              $(".nav-bar-f li:nth-child(" + x + ")").css({"visibility":"visible"});
+              x += 1;
+            }else{
+            }
+        },100);
+      }else{
+        console.log("test");
+        $(".nav-bar-f ul").animate({height:"-20px"},550);
+        var x = 5;
+        setInterval(function(){
+          if (x > -3){
+            $(".nav-bar-f li:nth-child(" + x + ")").css({"visibility":"collapse"});
+            x -= 1;
+          }else{
+          }
+        },50);
+      }
+    });
+      // On Click Ends
+      var mobileViewportHeight = parseInt($('.main-header').css('height'));
+      var mobileViewportWidth = parseInt($('.main-header').css('width'));
+      var mobilePosition;
+
+      function doOnOrientationChange(){
+        var varableStore;
+        if (mobilePosition === "Portrait"){
+          mobilePosition = "Landscape"
+          mobileViewportWidth = varableStore;
+          mobileViewportWidth = mobileViewportHeight;
+          mobileViewportHeight = varableStore;
+
+        }else{
+          mobileViewportHeight = varableStore;
+          mobileViewportHeight = mobileViewportWidth;
+          mobileViewportWidth = varableStore;
+        }
+        $(".main-header").css({"height":mobileViewportHeight + "px"});
+      }
+
+      function  headerScrollUp(){
+        $(".main-header h1").removeClass("animated fadeOutDown");
+        $('.main-header h1').css({"visiblity":"show"});
+        $(".main-header h1").addClass("animated fadeInUp");
+        headerVisible = false;
+      }
+
+      function headerScrollDown(){
+        $(".main-header h1").removeClass("animated fadeInUp");
+        $(".main-header h1").addClass("animated fadeOutDown");
+        setTimeout(function () {
+             $('.main-header h1').css({"visiblity":"hidden"});
+           }, 1000);
+           headerVisible = true;
+      }
+
+
+
+
+
+      window.addEventListener("orientationchange",doOnOrientationChange);
+
+      // $("body").smoothWheel();
+      if($(window).width() < 1024){
+        $(".about-me .about-me-p1").text("blablablax saperet reprehendunt, eam percipit adipisci patrioque id, esse omittantur te usu. Nullam volumus phaedrum ei duo, qui verear inimicus splendide te. Debet phaedrum ut eam, eros viris neglegentur mei eu. Ullamcorper consectetuer et pro. No facilis conclusionemque nec. Omnis tractatos ius ea, ex graecis similique duo. Et eruditi assentior vulputate his.orem ipsum dolor sit amet, sit ex saperet reprehendunt, eam percipit adipisci patrioque id, esse omittantur te usu. Nullam volumus phaedrum ei duo, qui verear inimicus splendide te. Debet phaedrum ut eam, eros viris neglegentur mei eu. Ullamcorper consectetuer et pro. No facilis conclusionemque nec. Omnis tractatos ius ea, ex graecis similique duo. Et eruditi assentior vulputate his.");
+      }
+      $(window).resize(function() {
+        if ($(window).width() <= 1024) {
+        $(".about-me .about-me-p1").text("blablablax saperet reprehendunt, eam percipit adipisci patrioque id, esse omittantur te usu. Nullam volumus phaedrum ei duo, qui verear inimicus splendide te. Debet phaedrum ut eam, eros viris neglegentur mei eu. Ullamcorper consectetuer et pro. No facilis conclusionemque nec. Omnis tractatos ius ea, ex graecis similique duo. Et eruditi assentior vulputate his.orem ipsum dolor sit amet, sit ex saperet reprehendunt, eam percipit adipisci patrioque id, esse omittantur te usu. Nullam volumus phaedrum ei duo, qui verear inimicus splendide te. Debet phaedrum ut eam, eros viris neglegentur mei eu. Ullamcorper consectetuer et pro. No facilis conclusionemque nec. Omnis tractatos ius ea, ex graecis similique duo. Et eruditi assentior vulputate his.");
+        }else{
+          $(".about-me .about-me-p1").text("blablablax saperet reprehendunt, eam percipit adipisci patrioque id, esse omittantur te usu. Nullam volumus phaedrum ei duo, qui verear inimicus splendide te. Debet phaedrum ut eam, eros viris neglegentur mei eu. Ullamcorper consectetuer et pro. No facilis conclusionemque nec. Omnis tractatos ius ea, ex graecis similique duo. Et eruditi assentior vulputate his.orem ipsum dolor sit amet, sit ex saperet reprehendunt, eam percipit adipisci patrioque id, esse omittantur te usu. Nullam volumus phaedrum ei duo, qui verear inimicus splendide te. Debet phaedrum ut eam, eros viris neglegentur mei eu. Ullamcorper consectetuer et pro. No facilis conclusionemque nec. Omnis tractatos ius ea, ex graecis similique duo. Et eruditi assentior vulputate his.");
+        }
+      });
+      var ismobile = /Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+      if (!ismobile){
+        var headerVisible = false;
+        var wScroll = 0;
+        $(".main-header h1").addClass("animated bounceInDown");
+        setTimeout(function () {
+          $('.main-header h1').removeClass('animated bounceInDown');
+        }, 1000);
+
+        $(window).scroll(function(){
+          var height = $(".main-header").height();
+          wScroll = $(this).scrollTop();
+          if (wScroll >=height+500){
+            //do something
+          }else{
+              console.log(wScroll);
+              if (wScroll > 300) {
+                headerScrollDown();
+              }
+              else if (wScroll < 300){
+                headerScrollUp();
+              }
+          }
+
+          if (wScroll >= 40 && wScroll < 700){
+            $(".main-header h2").css
+            ({"opacity":0.8/(wScroll/100)});
+          }else{
+            $(".main-header h2").css
+            ({"opacity":5});
+
+            $(".main-header h1").css
+            ({"font-size":"6.5vw"});
+          }
+
+        });
+      }else{
+        if (mobileViewportWidth > mobileViewportHeight){
+          mobilePosition = "Landscape";
+        }else{
+          mobilePostion = "Portrait";
+        }
+        $(".main-header").css({"height":mobileViewportHeight + "px"});
+
+        console.log($(".main-header").height());
+      }
+    });
+
+  </script>
+
+</html>
