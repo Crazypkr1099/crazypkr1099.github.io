@@ -6,13 +6,13 @@
 
 var streamers = ["Crazypkr1099", "Papatooshi", "Freecodecamp", "Xartuo","CloakedYoshi","Nom_in_HD","LeFrenchStallion","DegenTP","Sinqnew","PangaeaPanga"];
 
-let JSONOnline = function(jsonRead) {
-    let logoURL = "http://www-cdn.jtvnw.net/images/xarth/404_user_50x50.png"
+var JSONOnline = function(jsonRead) {
+    var logoURL = "http://www-cdn.jtvnw.net/images/xarth/404_user_50x50.png"
     if (jsonRead.stream != null) {
         if (jsonRead.stream.channel.logo != null) {
             logoURL = jsonRead.stream.channel.logo
         }
-        let div = $(`
+        var div = $(`
           <section class="streamer_box ${jsonRead.stream.channel.display_name}">
             <div class="main_content">
               <div id="streamerLogo"><img src="${logoURL}"></img></div>
@@ -32,9 +32,9 @@ let JSONOnline = function(jsonRead) {
     }
 }
 
-let JSONOffline = function(jsonRead) {
-    let logoURL = "http://www-cdn.jtvnw.net/images/xarth/404_user_50x50.png";
-    let profile_banner = "http://web-hosting-blog.rackservers.com.au/wp-content/uploads/2012/08/internet-error-404-file-not-found.jpg";
+var JSONOffline = function(jsonRead) {
+    var logoURL = "http://www-cdn.jtvnw.net/images/xarth/404_user_50x50.png";
+    var profile_banner = "http://web-hosting-blog.rackservers.com.au/wp-content/uploads/2012/08/internet-error-404-file-not-found.jpg";
     if (jsonRead.logo != null) {
         logoURL = jsonRead.logo;
     }
@@ -42,7 +42,7 @@ let JSONOffline = function(jsonRead) {
         profile_banner = jsonRead.profile_banner;
     }
     if (jsonRead.stream == null) {
-        let div = $(`
+        var div = $(`
          <section class="streamer_box ${jsonRead.display_name}">
            <div class="main_content">
              <div id="streamerLogo"><img src="${logoURL}"></img></div>
@@ -62,7 +62,7 @@ let JSONOffline = function(jsonRead) {
     }
 }
 
-let JSON = (sort = "friends") => {
+var JSON = function(sort){
     streamers.forEach(function(streamer_name) {
         $.ajax({
             url: `https://api.twitch.tv/kraken/streams/${streamer_name}`,
