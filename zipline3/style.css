@@ -1,0 +1,177 @@
+@font-face{
+  font-family: poplar;
+  src: url(PoplarStd.otf);
+}
+
+*{
+  margin:0;
+  padding:0;
+}
+html{
+  border-left:30px solid #03193c;
+}
+body{
+  color:white;
+}
+
+header{
+  height:100px;
+  display:flex;
+  justify-content: space-between;
+  align-items: baseline;
+  background-color: #0d47a1;
+}
+
+header .logo_box{
+  text-shadow: 2px 2px 2px black;
+}
+
+header .logo_box span{
+  margin-top:20px;
+  margin-left:40px;
+  display:inline-block;
+}
+
+header .logo_box h1{
+  display:inline-block;
+  font-size:4.3vw;
+  margin-left:20px;
+  font-family: poplar;
+}
+
+header nav{
+}
+
+header nav ul{
+  width:100%;
+  bottom:25px;
+  display:flex;
+  justify-content: space-between;
+}
+
+
+
+header nav li{
+  color: #c1bfbf;
+  list-style: none;
+  font-size:2em;
+  display:inline-block;
+  padding:20px;
+}
+
+header nav #selected{
+  color:white;
+  text-shadow: 1px 1px black;
+}
+
+header nav li:last-child{
+  margin-right:20px;
+}
+
+.container{
+  margin:30px 0px 0px 50px;
+}
+
+.main_content:hover{
+  cursor: pointer;
+  background-color: #0b2a59;
+}
+
+.main_content{
+  position:relative;
+  background-color: #03193b;
+  -webkit-border-top-left-radius: 20px;
+  -webkit-border-bottom-left-radius: 20px;
+  -moz-border-radius-topleft: 20px;
+  -moz-border-radius-bottomleft: 20px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  height:100px;
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#streamerLogo{
+  width:75px;
+  overflow: hidden;
+  margin-left:30px;
+  height:75px;
+  display:inline-block;
+  border-radius: 50%;
+  background-color: white;
+}
+
+#streamerLogo img{
+  height:75px;
+  width:75px;
+}
+
+#streamerName{
+  font-size:3em;
+  display:inline-block;
+}
+#streamerStatus{
+  display:inline-block;
+  font-size:3em;
+  margin-right:30px;
+}
+
+[data-status="online"]{
+  color: #11b44a;
+}
+[data-status="offline"]{
+  color:#fd3939;
+}
+
+.container #active{
+  height:200px;
+  background-color: #1a58b9;
+  -webkit-border-bottom-left-radius: 20px;
+  -moz-border-radius-bottomleft: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+.container #inactive{
+  height:0px;
+  overflow: hidden;
+}
+.popup{
+    margin-left:200px;
+    display:flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom:20px;
+}
+
+.popup_content{
+  display:inline-block;
+  text-overflow: ellipsis;
+  overflow:hidden;
+  white-space: nowrap;
+  margin-left:20px;
+  max-width:600px;
+}
+
+#streamerTitle{
+  font-size:2.5vw;
+  border-bottom:2px solid white;
+}
+
+#streamerViewers, #streamerFollowers{
+  font-size:2.2vw;
+  padding: 10px 0px 0px 40px;
+}
+
+.popup_image{
+  display:inline-block;
+  width:300px;
+  margin-left:20px;
+  height:150px;
+  background-color: white;
+}
+
+.popup_image img{
+  width:300px;
+  height:150px;
+}
