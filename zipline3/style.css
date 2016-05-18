@@ -110,6 +110,7 @@ header nav li:last-child{
 #streamerName{
   font-size:3em;
   display:inline-block;
+  text-shadow: 5px 5px 5px black;
 }
 #streamerStatus{
   display:inline-block;
@@ -140,8 +141,16 @@ header nav li:last-child{
     margin-left:200px;
     display:flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
     margin-bottom:20px;
+}
+
+.popup:first-child{
+  padding-left:300px;
+}
+
+.popup:last-child{
+  padding-right:50px;
 }
 
 .popup_content{
@@ -150,16 +159,17 @@ header nav li:last-child{
   overflow:hidden;
   white-space: nowrap;
   margin-left:20px;
-  max-width:600px;
+  max-width:64%;
+  min-width:360px;
 }
 
 #streamerTitle{
-  font-size:2.5vw;
+  font-size:1.9vw;
   border-bottom:2px solid white;
 }
 
 #streamerViewers, #streamerFollowers{
-  font-size:2.2vw;
+  font-size:1.7vw;
   padding: 10px 0px 0px 40px;
 }
 

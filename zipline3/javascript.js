@@ -51,7 +51,7 @@ let JSONOffline = function(jsonRead) {
          </div>
          <div class="popup" id="active">
            <div class="popup_content">
-             <div id="streamerTitle"></div>
+             <div id="streamerTitle">Currently Not Streaming... </div>
              <div id="streamerViewers">~ Total Views: ${jsonRead.views}</div>
              <div id="streamerFollowers">~ Followers: ${jsonRead.followers}</div>
            </div>
@@ -109,26 +109,5 @@ let JSON = (sort = "friends") => {
 
 
 $(document).ready(function() {
-    JSON("friends");
+    JSON("offline");
 });
-
-// for (let i = 0; i < streamers.length; i++){
-let div = $(`
-  <section class="streamer_box streamer[NAMEHERE]">
-    <div class="main_content">
-      <div id="streamerLogo"></div>
-      <div id="streamerName">Crazypkr1099</div>
-      <div id="streamerStatus" data-status="online">Online</div>
-  </div>
-  <div class="popup" id="active">
-    <div class="popup_content">
-      <div id="streamerTitle">Designing a webpage \w Freecodecamp</div>
-      <div id="streamerViewers">~ Current Viewers: 2000</div>
-      <div id="streamerFollowers">~ Current Amount of Followers: 2000</div>
-    </div>
-    <div class="popup_image"></div>
-  </div>
-  </section>`)
-$(".container").append(div);
-// // https://static-cdn.jtvnw.net/previews-ttv/live_user_crazypkr1099-400x200.jpg
-// }
