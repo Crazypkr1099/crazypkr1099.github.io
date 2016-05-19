@@ -109,5 +109,5 @@ var JSON = function(sort){
 
 
 $(document).ready(function() {
-    JSON("offline");
+    JSON("friends");
 });
