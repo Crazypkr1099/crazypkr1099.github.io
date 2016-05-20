@@ -189,6 +189,7 @@ header nav li:last-child{
   display:inline-block;
   width:300px;
   margin-left:20px;
+  overflow:hidden;
   height:150px;
   background-color: white;
 }
