@@ -189,7 +189,6 @@ header nav li:last-child{
   display:inline-block;
   width:300px;
   margin-left:20px;
-  overflow:hidden;
   height:150px;
   background-color: white;
 }
@@ -197,4 +196,10 @@ header nav li:last-child{
 .popup_image img{
   width:300px;
   height:150px;
+}
+
+@media (max-width: 770px) {
+  .popup_image img{
+      visibility: hidden;
+  }
 }
