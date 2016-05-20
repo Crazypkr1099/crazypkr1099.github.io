@@ -25,7 +25,7 @@ var JSONOnline = function(jsonRead) {
               <div id="streamerViewers">~ Viewers: ${jsonRead.stream.viewers}</div>
               <div id="streamerFollowers">~ Followers: ${jsonRead.stream.channel.followers}</div>
             </div>
-            <div class="popup_image"><img src="https://static-cdn.jtvnw.net/previews-ttv/live_user_${(jsonRead.stream.channel.display_name).toLowerCase()}-300x150.jpg"></img></div>
+            <img src="https://static-cdn.jtvnw.net/previews-ttv/live_user_${(jsonRead.stream.channel.display_name).toLowerCase()}-300x150.jpg"></img>
             </div>
           </section>`)
         $(".container").append(div);
@@ -56,7 +56,7 @@ var JSONOffline = function(jsonRead) {
              <div id="streamerViewers">~ Total Views: ${jsonRead.views}</div>
              <div id="streamerFollowers">~ Followers: ${jsonRead.followers}</div>
            </div>
-           <div class="popup_image"><img src="${profile_banner}"></img></div>
+           <img src="${profile_banner}"></img>
            </div>
          </section>`)
         $(".container").append(div);
