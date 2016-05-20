@@ -197,9 +197,12 @@ header nav li:last-child{
   width:300px;
   height:150px;
 }
-
-@media (max-width: 770px) {
-  .popup_image img{
-      visibility: hidden;
+@media (max-width: 1015px) {
+  .popup_image{
+    display:none;
   }
+  .popup_content{
+    max-width:100%;
+  }
+
 }
