@@ -59,9 +59,15 @@ header nav li{
   padding:20px;
 }
 
-header nav #selected{
+header nav .selected{
   color:white;
   text-shadow: 1px 1px black;
+}
+
+header nav li:hover{
+  text-shadow:3px 3px 3px black;
+  color:white;
+  cursor:pointer;
 }
 
 header nav li:last-child{
@@ -70,6 +76,11 @@ header nav li:last-child{
 
 .container{
   margin:30px 0px 0px 50px;
+}
+
+.streamer_box{
+  margin-left:100%;
+  width:0;
 }
 
 .main_content:hover{
@@ -126,16 +137,17 @@ header nav li:last-child{
 }
 
 .container #active{
-  height:200px;
+  max-height:300px;
+  padding:10px 10px;
   background-color: #1a58b9;
-  -webkit-border-bottom-left-radius: 20px;
-  -moz-border-radius-bottomleft: 20px;
   border-bottom-left-radius: 20px;
+  -webkit-transition: all 1.5s ease;
 }
 
 .container #inactive{
-  height:0px;
+  max-height:0px;
   overflow: hidden;
+  -webkit-transition: all 0.5s ease;
 }
 .popup{
     margin-left:200px;
