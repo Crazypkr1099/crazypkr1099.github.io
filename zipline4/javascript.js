@@ -1,4 +1,5 @@
 $(document).ready(function() {
+    var inputValue = "Kappa";
     $('.search_box_container').addClass('animated bounceInDown').delay(1000).queue(function(next) {
         $(this).removeClass('animated bounceInDown');
         next();
@@ -6,7 +7,7 @@ $(document).ready(function() {
     $(".search_box_container i").on("click",function() {
         $('.search_box_container').addClass('animated zoomOutUp').delay(1000).queue(function(next) {
           $(this).removeClass("animated zoomOutUp");
-            var inputValue = $(".search_box_container form input").val();
+            inputValue = $(".container form input").val();
             $(this).css("display","none");
             $(".error").remove()
             getJSON(inputValue);
@@ -20,6 +21,29 @@ $(document).ready(function() {
       getJSON($(".container form input").val());
 
     });
+    $(document).keypress(function(event) {
+      var keycode = (event.keyCode ? event.keyCode : event.which);
+      if(keycode == '13') {
+        event.preventDefault();
+        if ($(".search_box_container").css("display") == "flex"){
+            inputValue = $(".search_box_container form input").val();
+        }else{
+          inputValue = $(".container form input").val();
+        }
+        if (!inputValue){
+          inputValue = "Kappa";
+        }
+        $('.search_box_container').addClass('animated zoomOutUp').delay(1000).queue(function(next) {
+          $(this).removeClass("animated zoomOutUp");
+            $(this).css("display","none");
+            $(".container header h2").empty()
+            $(".container .pages").empty()
+            $(".error").remove()
+            getJSON(inputValue);
+            next();
+        });
+      }
+});
 });
 
 var getJSON = function(search) {
