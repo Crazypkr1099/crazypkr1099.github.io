@@ -4,7 +4,7 @@
 // viewers -- viewer count
 // status -- Stream name
 
-var streamers = ["Crazypkr1099","Wild4games","Pangaeapanga","Gamingdekap","Sinqnew",
+var streamers = ["Crazypkr1099","wertyoo","Wild4games","Pangaeapanga","Gamingdekap","Sinqnew",
 "Sethbling","Jaku","Bostwiek","Automateallthegames","Designeralanm","Devwars","LeFrenchStallion","Freecodecamp",
 "Ziggerergames","Spa12k","Kapulara","Papatooshi","CloakedYoshi","Bounceyboy"];
 
