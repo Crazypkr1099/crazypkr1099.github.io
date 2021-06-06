@@ -1,0 +1,140 @@
+*{
+  padding:0;
+  margin:0;
+}
+
+body{
+  /* Opera */
+  background-image: -o-radial-gradient(center, ellipse farthest-corner, #B0A18E 0%, #1E1B13 90%);
+
+  /* W3C Markup */
+  background-image: radial-gradient(ellipse farthest-corner at center, #B0A18E 0%, #1E1B13 90%);
+  display:flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.search_box_container{
+  min-width:50%;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  height:40%;
+  text-align: center;
+}
+
+.search_box_container h1{
+  text-shadow: 4px 4px 4px black;
+  font-size:3.5em;
+  color:white;
+  margin-bottom:30px;
+}
+
+.search_box_container form input{
+  font-size:2em;
+  height:50px;
+  width:50%;
+  border: 1px solid rgba(0,0,0,0.5);
+  margin-bottom:20px;
+}
+
+.error{
+  color:#ff6666;
+  font-size:2em;
+  text-shadow:2px 2px 2px black;
+}
+
+.search_box_container i{
+  font-size:4em;
+  color:white;
+  text-shadow:2px 2px 2px black;
+}
+
+.search_box_container i:hover, header form span:hover{
+  cursor: pointer;
+  font-style: italic;
+}
+
+
+.container{
+  display:none;
+  margin:0 auto;
+  background-color: white;
+  width:97%;
+}
+
+header{
+  position:fixed;
+  top:0;
+  width:97%;
+  display:flex;
+  align-items: center;
+  justify-content: space-between;
+  padding:20px 0;
+  background-color: #1E1B13;
+  color:white;
+}
+
+header h2{
+  font-size:2vw;
+  order:-1;
+  display:inline-block;
+}
+
+header form{
+  order:100;
+  display:flex;
+  align-items: center;
+}
+header form input{
+  height:40px;
+  width:300px;
+  margin:0 10px;
+}
+
+header form span{
+  font-size:2em !important;
+}
+
+
+.display_box{
+  margin-top:95px;
+  padding-bottom:30px;
+}
+
+.pages{
+  padding-top:30px;
+  padding-left:30px;
+  min-height:100%;
+}
+
+.container section {
+  background-color: #6a5750;
+  padding:20px 0px 20px 0px;
+  margin:20px 0;
+  color:white;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  margin-left:100%;
+  width:0;
+  z-index:-3;
+}
+.container section h3{
+  font-size:2em;
+  margin-left:20px;
+  font-weight: bold;
+  text-shadow:3px 3px 3px black;
+  padding-bottom:10px;
+}
+
+.container section p{
+  margin-left:40px;
+  font-style: italic;
+  text-shadow: 2px 2px 2px black;
+}
+
+.container section:hover{
+  cursor:pointer;
+  background-color: #493c37;
+}
