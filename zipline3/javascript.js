@@ -85,6 +85,9 @@ var JSON = function(sort) {
         $.ajax({
             url: `https://api.twitch.tv/kraken/streams/${streamer_name}`,
             dataType: 'jsonp',
+            headers:{
+            'Client-ID': 'm5idiicw1wjop971ytrb7zccvwqr7j'
+            },
             success: function(jsonReadOnline) {
                 if (jsonReadOnline.stream != null) {
                     if (sort == "online") {
@@ -93,8 +96,11 @@ var JSON = function(sort) {
                         JSONOnline(jsonReadOnline);
                         if (jsonReadOnline.stream == null) {
                             $.ajax({
-                                url: `https://api.twitch.tv/kraken/channels/${streamer_name}`,
+                                url: `https://api.twitch.tv/kraken/streams/${streamer_name}`,
                                 dataType: 'jsonp',
+                                headers:{
+                                'Client-ID': 'm5idiicw1wjop971ytrb7zccvwqr7j'
+                                },
                                 success: function(jsonReadOffline) {
                                     JSONOffline(jsonReadOffline);
                                 }
@@ -103,8 +109,11 @@ var JSON = function(sort) {
                     }
                     if (jsonReadOnline.stream == null) {
                         $.ajax({
-                            url: `https://api.twitch.tv/kraken/channels/${streamer_name}`,
+                            url: `https://api.twitch.tv/kraken/streams/${streamer_name}`,
                             dataType: 'jsonp',
+                            headers:{
+                            'Client-ID': 'm5idiicw1wjop971ytrb7zccvwqr7j'
+                            },
                             success: function(jsonReadOffline) {
                                 JSONOffline(jsonReadOffline);
                             }
@@ -115,6 +124,9 @@ var JSON = function(sort) {
                     $.ajax({
                         url: `https://api.twitch.tv/kraken/channels/${streamer_name}`,
                         dataType: 'jsonp',
+                        headers:{
+                        'Client-ID': 'm5idiicw1wjop971ytrb7zccvwqr7j'
+                        },
                         success: function(jsonReadOffline) {
                             JSONOffline(jsonReadOffline);
                         }
